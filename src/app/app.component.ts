@@ -23,14 +23,14 @@ export class AppComponent {
   check() {
   this.weatherData = '';
   let appId = 'bfa9676b5d906c86dc05a9ccc704e8a1';
-  let url ='https://api.openweathermap.org/data/2.5/weather?q'
+  let url ='https://api.openweathermap.org/data/2.5/weather?'
   let params = {q:this.city, appid:appId }
     this.http.get(url,{params}).subscribe(
       (data)=>{
         this.weatherData = data
 
     },(error)=>{
-      error= 'data not'
+      error= 'Data Not Found'
     })
   }
 
